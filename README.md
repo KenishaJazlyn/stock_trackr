@@ -1,4 +1,9 @@
- ## Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?
+## Stock_trackr
+    Nama : Kenisha Jazlyn Malano
+    NPM  : 2206030262
+    Kelas: PBP-E
+## Tugas 7
+ ### Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?
 | Stateless Widget | Stateful Widget |
 | ----- | ----- |
 | Bersifat statis | Bersifat dinamis |
@@ -7,7 +12,7 @@
 | Lebih ringan dirender | Memerlukan waktu reload render |
 | Cocok untuk widget tanpa perubahan data di dalamnya | Diperlukan untuk menyusun widget dengan pengolahan data yang interaktif | 
 
- ## Sebutkan seluruh widget yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.
+ ### Sebutkan seluruh widget yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.
 |Widget| Fungsi|
 | ----- | ----- |
 |Scaffold| Ini mendefinisikan struktur dasar aplikasi Anda, termasuk app bar dan isi.|
@@ -25,7 +30,7 @@
 |SnackBar| Ditampilkan ketika kartu ditekan, menampilkan pesan berdasarkan nama item.|
 
 
- ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)
+ ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)
    - Membuat proyek flutter baru dengan nama "stock_trackr
    - Merapikan struktur proyek dengan membuat file dart baru `menu.dart`
    - Membuat widget sederhana yang akan menampilkan snackbar, ketika ditekan.
