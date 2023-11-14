@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:stock_trackr/menu.dart';
+import 'package:stock_trackr/screens/menu.dart';
+import 'package:stock_trackr/widgets/model.dart';
+List<Item> modelList = [];
 void main() {
   runApp(const MyApp());
 }
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red.shade200),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 133, 132, 133)),
       ),
       home: MyHomePage(),
     );
