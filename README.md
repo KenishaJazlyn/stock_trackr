@@ -73,3 +73,41 @@ Mengatur API, penyimpanan lokal, dan repositori yang mengatur data.
  4. Membuat list pada `main.dart` untuk menyimpan setiap input item oleh user 
  5. Membuat `view_item.dart` yang berfungsi menampilkan semua item yang diinput
  6. Mengatur navigasi button `Lihat Item` ke page view_item yang telah dibuat sebelumnya
+
+# Tugas 9
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Mengambil data JSON tanpa sebelumnya membuat model dapat dilakukan, di mana data akan tetap dalam format jsonDecode seperti pada contoh: 
+`var data = jsonDecode(utf8.decode(response.bodyBytes));`
+Meskipun memungkinkan, tetapi pendekatan ini tidak seoptimal membuat model terlebih dahulu sebelum mengambil data JSON. Dengan membuat model terlebih dahulu, data akan langsung diinisiasi sebagai objek sesuai dengan kelas modelnya, memberikan kejelasan struktur dan memudahkan pengelolaan data.
+## Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+`CookieRequest` berfungsi untuk menghandle HTTPRequest dengan autentikasi berbasis cookie dan mengatur semua cookie untuk sesi pengguna. 
+## Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+- JSON ditampilkan di halaman proyek django  `https://kenisha-jazlyn-tugas.pbp.cs.ui.ac.id/json`
+- JSON difetch ke dalam `list_product.dart` sesuai urlnya dengan header `"Content-Type": "application/json"` 
+- JSON yang telah di fetch akan disesuaikan bodynya menuju model Product
+- Data list dalam model Product dipanggil dalam `ProductPage` dalam bentuk card.
+- Setiap card memiliki onTap() yang jika diklik menampilkan detail data item tersebut
+## Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+- Pada `loginPage` pada Flutter, user akan memasukkan username dan password. 
+- Setelah itu username dan password itu akan dikirim ke method login pada django. 
+- Jika username dan password sesuai, user dapat masuk kehalaman `MyHomePage` dan jika tidak sesuai akan menampilkan message `Login gagal, periksa kembali username atau kata sandi.`
+
+## Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+| Widget | Fungsi | 
+| ----- | ----- |
+| MaterialPageRoute | Mengarahkan routing ke halaman (widget) tertentu | 
+| Drawer | Membuat drawer navigator |
+| ListTile | Membuat list beberapa tile |
+| Scaffold | Mengatur layout dari widget yang ada di dalamnya |
+| AppBar | Menambahkan bar aplikasi yang berisi title dengan align left | 
+| Text | Berisi sebuah Text dengan properti di dalamnya |
+| Center | Mengatur layout widget di dalamnya agar centered |
+| Column | Mengatur layout widget di dalamnya agar turun ke bawah (tidak inline-flex) |
+| TextStyle | Mengatur style dari sebuah text |
+| Container | Menampung beberapa widget di dalamnya |
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+- Startapp baru pada proyek baru bernama `authentication` pada proyek django
+- Membuat fungsi login dan logout pada `authentication/views.py` 
+- Menginstall package pada proyek flutter dengan `flutter pub add provider` dan `flutter pub add pbp_django_auth`
+- Membuat page baru untuk login pada directory `screens`
+- Membuat file `list_product.dart` untuk menampilkan semua item dalam bentuk card, dan card tersebut memiliki onTap() yang jika diklik akan dipassing ke DetailItemPage untuk menampilkan data detail dari item yang diklik
