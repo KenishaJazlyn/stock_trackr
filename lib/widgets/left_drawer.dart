@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:stock_trackr/screens/list_product.dart';
 import 'package:stock_trackr/screens/menu.dart';
 import 'package:stock_trackr/screens/shoplist_form.dart';
-import 'package:stock_trackr/screens/view_item.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -66,10 +66,9 @@ class LeftDrawer extends StatelessWidget {
             title: const Text('Lihat Item'),
             // Bagian redirection ke ShopFormPage
             onTap: () {
-              Navigator.pushReplacement(
+              Navigator.push(
               context,
-              MaterialPageRoute(
-                  builder: (context) => const ViewItem(),
+              MaterialPageRoute(builder: (context) => const ProductPage(),
               ));
             },
           ),
